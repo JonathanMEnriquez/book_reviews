@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* index */
+
+#wrapper{
+    background-color: silver;
+    min-height: 660px;
+    padding: 20px;
+}
+
+#reg_section{
+    background-color: white;
+    width: 55%;
+    padding: 35px;
+    margin-bottom: 20px;
+    border: 4px solid darkslategrey;
+    margin-left: 20%;
+}
+
+#reg_section h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.error_box{
+    max-height: 40px;
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+.leftside_form{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.leftside_form p{
+    font-size: 22px;
+    margin-bottom: 13.75px;
+    display: inline-block;
+    width: 95%;
+}
+
+.input_field{
+    width: 65%;
+    border: 2px solid silver;
+    height: 25px;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.rightside_form{
+    vertical-align: top;
+    width: 65%;
+    display: inline-block;
+}
+
+#register_button{
+    background-color: green;
+    font-size: 17px;
+    color: white;
+    padding: 15px;
+    margin: 15px;
+    text-shadow: 1px 1px darkslategray;
+}
+
+.error{
+    color: red;
+    margin-bottom: 3px;
+}
+
+.warning{
+    color: red;
+    margin-bottom: 3px;
+}
+
+.success{
+    color: green;
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+
+/* login section */
+
+#login_section{
+    background-color: white;
+    width: 55%;
+    padding: 35px;
+    margin-bottom: 20px;
+    border: 4px solid darkslategrey;
+    margin-left: 20%;
+}
+
+#login_section h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+#login_button{
+    background-color: green;
+    font-size: 17px;
+    color: white;
+    padding: 15px;
+    margin: 15px;
+    text-shadow: 1px 1px darkslategray;
+}
+
+#email_login{
+    font-size: 19px;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 95%;
+    margin-top: 2px;
+}
+
+/* homepage books */
+
+#header{
+    background-color: white;
+    width: 95%;
+    padding: 15px;
+    border: 2px solid black;
+    text-align: right;
+}
+
+#header h1{
+    display: inline-block;
+    width: 20%;
+    margin-right: 57%;
+}
+
+#header a{
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+    color: gray;
+}
+
+#recent{
+    background-color: white;
+    width: 60%;
+    margin-left: 1.5%;
+    margin-top: 40px;
+    padding: 15px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#recent h2{
+    margin-bottom: 25px;
+}
+
+#recent h3{
+    margin-bottom: 10px;
+    margin-left: 2.5%;
+}
+
+#recent a{
+    text-decoration: none;
+    font-style: none;
+}
+
+.indent{
+    margin-left: 7%;
+    padding: 10px;
+    border: .5px dashed gray;
+    margin-bottom: 5px;
+}
+
+.indent p{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.star{
+    display: inline-block;
+    width: 35px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 3px 3px yellow;
+}
+
+.smaller_text{
+    font-size: 12px;
+}
+
+#other_books{
+    background-color: white;
+    width: 25%;
+    margin-left: 5%;
+    margin-top: 40px;
+    padding: 25px;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+}
+
+#other_books h2{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#other_books p{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: aqua;
+}
+
+#other_books a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+/* show books */
+
+#book_info{
+    background-color: white;
+    width: 25%;
+    margin-left: 5%;
+    margin-top: 40px;
+    padding: 25px;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+}
+
+#book_info h1{
+    margin-bottom: 15px;
+}
+
+/* add review / book */
+
+#addbook{
+    padding: 15px;
+    width: 80%;
+    margin-left: 6%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border: 4px solid greenyellow;
+}
+
+#addbook textarea{
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.topaddbook{
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.selectauthor{
+    font-size: 17px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.leftside_author{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3%;
+    text-align: right;
+}
+
+.leftside_author p{
+    font-size: 17px;
+    margin-bottom: 13.75px;
+    display: inline-block;
+    width: 95%;
+}
+
+.leftside_author h3{
+    margin: 10px;
+}
+
+.rightside_author{
+    vertical-align: top;
+    width: 50%;
+    display: inline-block;
+}
+
+#rating{
+    margin-top: 150px;
+}
+
+/* showbook */
+
+#reviews{
+    width: 80%;
+    margin-left: 7%;
+    padding: 15px;
+    background-color: white;
+    border: 3px solid greenyellow;
+    margin-top: 25px;
+}
+
+#reviews h1{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.tiny{
+    font-size: 12px;
+}
+
+.inline_p{
+    display: inline-block;
+}
+
+#addreview{
+    text-align: center;
+    margin-top: 25px;
+}
+
+#addreview h5{
+    margin: 10px;
+    text-shadow: .5px .5px greenyellow;
+}

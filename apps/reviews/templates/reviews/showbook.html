@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reviews/css/login_style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="/books">Home</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div id="book_info">
+            <h1>{{book.title}}</h1>
+            <h5>Author: {{book.main_author}}</h5>
+        </div>
+        <div id="reviews">
+            <h1>Reviews:</h1>
+            {% for review in reviews %}
+            <hr>
+            <p class="inline_p">Rating:</p>
+            {% if review.rating == 1 %}
+                <img src="{% static 'reviews/img/1.png' %}" class="star" alt="1 star">
+            {% endif %}
+            {% if review.rating == 2 %}
+                <img src="{% static 'reviews/img/2.png' %}" class="star" alt="1 star">
+            {% endif %}
+            {% if review.rating == 3 %}
+                <img src="{% static 'reviews/img/3.png' %}" class="star" alt="1 star">
+            {% endif %}
+            {% if review.rating == 4 %}
+                <img src="{% static 'reviews/img/4.png' %}" class="star" alt="1 star">
+            {% endif %}
+            {% if review.rating == 5 %}
+                <img src="{% static 'reviews/img/5.png' %}" class="star" alt="1 star">
+            {% endif %}
+            <p><a href="/users/{{review.reviewer.id}}">{{review.reviewer.first_name}}</a> says: "{{review.content}}"</p>
+            <p class="tiny">Posted on: {{review.created_at}}</p>
+            {% endfor %}
+        </div>
+        <div id="addreview">
+            <h5>Add your own review of this book:</h5>
+            {% if messages %}
+                {% for message in messages %}
+            <p class="{{message.tags}}">{{message}}</p>            
+                {% endfor %}
+            {% endif %}
+            <form action="/addbookshort/{{book.id}}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="title" value="{{book.title}}">
+                <input type="hidden" name="name" value="{{book.main_author.name}}">
+                <textarea name="content" cols="60" rows="10" placeholder="be honest..."></textarea><br>
+                <select name="rating" id="rating_dropdown">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+                <input type="submit" value="Submit Review">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

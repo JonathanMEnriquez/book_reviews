@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome {{user.username}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reviews/css/login_style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Welcome, {{user.first_name}}!</h1>
+            <a href="/books/add">Add Book and Review</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div id="recent">
+            <h2>Recent Book Reviews: </h2>
+            {% for review in recent %}
+                <h3><a href="/books/{{review.book.id}}">{{review.book.title}}</a></h3>
+                <div class="indent">
+                    <p>Rating:</p>
+                    {% if review.rating == 1 %}
+                        <img src="{% static 'reviews/img/1.png' %}" class="star" alt="1 star">
+                    {% endif %}
+                    {% if review.rating == 2 %}
+                        <img src="{% static 'reviews/img/2.png' %}" class="star" alt="1 star">
+                    {% endif %}
+                    {% if review.rating == 3 %}
+                        <img src="{% static 'reviews/img/3.png' %}" class="star" alt="1 star">
+                    {% endif %}
+                    {% if review.rating == 4 %}
+                        <img src="{% static 'reviews/img/4.png' %}" class="star" alt="1 star">
+                    {% endif %}
+                    {% if review.rating == 5 %}
+                        <img src="{% static 'reviews/img/5.png' %}" class="star" alt="1 star">
+                    {% endif %}
+                    <br> <h4><a href="users/{{review.reviewer.id}}">{{review.reviewer.first_name}}</a> says: {{review.content}}</h4>
+                    <br> <p class="smaller_text">Posted on: {{review.created_at|date:"F j, Y"}}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="other_books">
+            <h2>Other Books with Reviews:</h2>
+            {% for book in books %}
+            <p><a href="/books/{{book.id}}">{{book.title}}</a></p><br>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
